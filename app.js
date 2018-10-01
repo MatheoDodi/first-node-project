@@ -3,6 +3,9 @@ const _ = require('lodash');
 const yargs = require('yargs');
 const notes = require('./notes.js');
 const command = process.argv[2];
+
+
+debugger;
 const argv = yargs.argv;
 
 if (command === 'add') {

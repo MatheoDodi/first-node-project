@@ -3,13 +3,14 @@ const fs = require('fs');
 const addNote = (title, body) => {
     const stringNotes = fs.readFileSync('./notes-data.json')
 
+    
     const notes = JSON.parse(stringNotes);
     let note = {
         title,
         body
     }
     notes.push(note);
-    debugger
+    debugger;
     fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
