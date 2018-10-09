@@ -1,5 +1,13 @@
-const fs = require('fs');
-const greet = require('./greet');
+const Emitter = require('./playground/emitter');
 
-console.log(greet.english.greetings);
-greet.spanish();
+const emtr = new Emitter();
+
+emtr.on('greet', function() {
+    console.log('Hello');
+});
+
+emtr.on('greet', function() {
+    console.log('A greeting occurred!');
+});
+
+emtr.emit('greet');
