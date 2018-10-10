@@ -1,13 +1,5 @@
-const Emitter = require('./playground/emitter');
+const fs = require('fs');
 
-const emtr = new Emitter();
+var test = fs.readFileSync(__dirname + '/test.txt', 'utf8');
 
-emtr.on('greet', function() {
-    console.log('Hello');
-});
-
-emtr.on('greet', function() {
-    console.log('A greeting occurred!');
-});
-
-emtr.emit('greet');
+console.log(test);
